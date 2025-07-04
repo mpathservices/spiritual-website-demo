@@ -41,7 +41,7 @@ The website is fully responsive and optimized for:
 - Various screen sizes and orientations
 
 🚀 Live Demo
-View Live Website
+View Live Website: https://mpathservices.github.io/spiritual-website-demo/
 
 📋 Use Cases
 This template is perfect for:
