@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Chen - Spiritual Wellness & Healing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sage-green: #9CAF88;
+            --warm-cream: #F5F2E9;
+            --gentle-lavender: #B8A9C9;
+            --soft-white: #FEFEFE;
+            --warm-gray: #6B7280;
+            --light-sage: #E8EDE4;
+            --deep-sage: #7A8B6B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--warm-gray);
+            background-color: var(--soft-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--soft-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--sage-green);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--deep-sage);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--warm-gray);
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-sage) 0%, var(--warm-cream) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--warm-gray);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--sage-green);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(156, 175, 136, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--deep-sage);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(156, 175, 136, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: var(--soft-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 4px solid var(--sage-green);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-text h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--sage-green);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--warm-cream);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: var(--sage-green);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--soft-white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--sage-green);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--warm-gray);
+            line-height: 1.6;
+        }
+
+        /* Quiz Section */
+        .quiz {
+            padding: 80px 0;
+            background: var(--warm-cream);
+            text-align: center;
+        }
+
+        .quiz h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--sage-green);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-sage);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+        }
+
+        .quiz-question h3 {
+            font-size: 1.2rem;
+            color: var(--deep-sage);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .quiz-option {
+            padding: 0.8rem;
+            background: var(--soft-white);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--sage-green);
+            background: var(--warm-cream);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--sage-green);
+            background: var(--sage-green);
+            color: white;
+        }
+
+        .quiz-result {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--sage-green);
+            color: white;
+            border-radius: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--gentle-lavender);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--soft-white);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--soft-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--sage-green);
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 80px 0;
+            background: var(--soft-white);
+        }
+
+        .blog h2 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--sage-green);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background: var(--warm-cream);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--sage-green), var(--gentle-lavender));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-post h3 {
+            color: var(--sage-green);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .blog-date {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: var(--light-sage);
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--deep-sage);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: var(--soft-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-sage);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage-green);
+        }
+
+        .contact-info {
+            background: var(--soft-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-info h3 {
+            color: var(--sage-green);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-detail {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-sage);
+            color: var(--soft-white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--light-sage);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--soft-white);
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--light-sage);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--sage-green);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--light-sage);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+.learn-more-link,
+.read-more-link {
+    display: inline-block;
+    color: var(--sage-green);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.learn-more-link:hover,
+.read-more-link:hover {
+    color: var(--deep-sage);
+}
+
+
+/* FAQ Section */
+
+
+	.faq {
+            padding: 80px 0;
+     
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: var(--sage-green);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #f7fafc;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2d3748;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #edf2f7;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            color: #4a5568;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">Sarah Chen</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+		<li><a href="#faq">FAQ</a></li>
+                <li><a href="#quiz">Getting Started</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="fade-in">Finding clarity and healing through spiritual guidance</h1>
+            <p class="fade-in">Welcome to a space of gentle transformation and soulful discovery, where ancient wisdom meets modern life. Discover your path through personalized spiritual services designed to illuminate your journey.</p>
+            <a href="#contact" class="cta-button fade-in">Book Your Session</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Sarah Chen - Spiritual Wellness Practitioner">
+                </div>
+                <div class="about-text">
+                    <h2>About Sarah</h2>
+                    <p>Welcome, beautiful soul. I'm Sarah Chen, and I've been walking the path of spiritual healing for over 8 years. My journey began during a challenging period in my corporate career when I felt disconnected from my true purpose.</p>
+                    <p>Through my own experiences with energy healing, past life regression, and astrological guidance, I discovered the profound peace that comes from aligning with our authentic selves. Now, I'm honored to guide others on their own journeys of self-discovery and healing.</p>
+                    <p>I hold certifications in Reiki Master healing, past life regression therapy, and have completed advanced studies in Vedic astrology. My approach is gentle, non-judgmental, and deeply rooted in compassion for each person's unique path.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="fade-in">Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌟</div>
+                    <h3>Horoscope Readings</h3>
+                    <p>Discover your cosmic blueprint and life path. Think of your birth chart as a celestial map revealing your personality, strengths, and soul's journey. We'll explore what the stars reveal about your path forward with gentle guidance and practical insights.</p>
+<a href="#" class="learn-more-link">Learn More →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">✨</div>
+                    <h3>Reiki Energy Healing</h3>
+                    <p>Gentle energy work for balance and wellness. A soothing, hands-on healing practice that works with your body's natural energy flow. Many people feel deeply relaxed afterward, like experiencing a wonderful massage for your soul.</p>
+<a href="#" class="learn-more-link">Learn More →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔮</div>
+                    <h3>Past Life Regression</h3>
+                    <p>Explore your soul's journey through time. Through guided meditation, we gently explore memories your soul may carry from previous lifetimes. It's like gentle storytelling that can offer profound insights into current life patterns.</p>
+<a href="#" class="learn-more-link">Learn More →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🕊️</div>
+                    <h3>Spiritual Guidance</h3>
+                    <p>Compassionate support for life's questions. Whether you're facing a crossroads, seeking clarity, or simply wanting to deepen your spiritual connection, I offer gentle guidance to help you trust your inner wisdom.</p>
+<a href="#" class="learn-more-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="fade-in">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What is Reiki and how does it work?</div>
+                <div class="faq-answer">
+                    <p>Reiki is a Japanese healing technique that works with universal life energy. During a session, I act as a channel for this healing energy, which flows through my hands to you. It's completely non-invasive and works to restore balance in your body, mind, and spirit. Many people experience deep relaxation, reduced stress, and a sense of peace and well-being.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Do I need to believe in anything specific for these services to work?</div>
+                <div class="faq-answer">
+                    <p>Not at all! While an open mind is helpful, you don't need to hold any particular beliefs. Many of my clients come from various backgrounds and belief systems. The most important thing is that you feel comfortable and safe. I welcome people of all faiths and spiritual paths.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What should I expect in my first session?</div>
+                <div class="faq-answer">
+                    <p>We'll start with a brief conversation about what brings you here and what you're hoping to explore. I'll explain the process and answer any questions you have. Every session is tailored to your comfort level and needs. There's no pressure to share more than you're comfortable with, and you're in control throughout the entire experience.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How does past life regression work?</div>
+                <div class="faq-answer">
+                    <p>Past life regression uses gentle hypnosis to access memories that may be stored in your subconscious. You'll remain aware and in control throughout the process. It's a deeply relaxing experience, similar to daydreaming. Not everyone experiences vivid past life memories, and that's perfectly normal. Sometimes the insights come as feelings, symbols, or subtle knowing.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Are these services a replacement for medical or psychological treatment?</div>
+                <div class="faq-answer">
+                    <p>No, spiritual services are complementary to traditional medical and psychological care, not a replacement. I always encourage clients to maintain their relationships with healthcare providers. These services are designed to support your overall well-being and personal growth alongside any medical treatment you may be receiving.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How do I know which service is right for me?</div>
+                <div class="faq-answer">
+                    <p>Trust your intuition! If one service calls to you, that's often a good sign. You can also reach out for a brief consultation where we can discuss your goals and I can help you choose the most appropriate service. Many clients find that different services serve them at different times in their journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2 class="fade-in">New to This? Find Your Path</h2>
+            <div class="quiz-container fade-in">
+                <div class="quiz-question">
+                    <h3>What resonates most with you right now?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-service="horoscope">Understanding my life purpose and direction</div>
+                        <div class="quiz-option" data-service="reiki">Feeling more balanced and peaceful</div>
+                        <div class="quiz-option" data-service="pastlife">Exploring patterns that keep repeating in my life</div>
+                        <div class="quiz-option" data-service="guidance">Seeking clarity on a specific life situation</div>
+                    </div>
+                </div>
+                <div class="quiz-result" id="quiz-result">
+                    <h3>Perfect! Here's what I recommend:</h3>
+                    <p id="recommendation-text"></p>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Book Your Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="fade-in">What My Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in">
+                    <p>"Sarah's past life regression session was incredibly healing. I finally understood why I've always felt drawn to certain places and people. The insights have brought such peace to my current relationships."</p>
+                    <div class="testimonial-author">- Emma R.</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p>"The Reiki session left me feeling lighter than I had in months. Sarah creates such a safe, nurturing space. I've been sleeping better and feel more centered in my daily life."</p>
+                    <div class="testimonial-author">- Michael T.</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p>"Sarah's birth chart reading was spot on. She explained everything in a way that made sense, and I left with practical guidance for my career transition. Highly recommend!"</p>
+                    <div class="testimonial-author">- Jennifer L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="fade-in">Read More - My Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-post fade-in">
+                    <div class="blog-image"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Understanding Your Intuition"></div>
+                    <div class="blog-content">
+			<br></br>
+                        <h3>Understanding Your Intuition: A Beginner's Guide</h3>
+                        <div class="blog-date">March 15, 2025</div>
+                        <p>Learn to recognize and trust your inner voice with simple, practical exercises that anyone can do. Discover how intuition speaks to you uniquely...</p>
+<a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-post fade-in">
+                    <div class="blog-image"><img src="https://images.unsplash.com/photo-1532153354457-5fbe1a3bb0b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Creating Sacred Space"></div>
+                    <div class="blog-content">
+			<br></br>
+                        <h3>Creating Sacred Space at Home</h3>
+                        <div class="blog-date">March 8, 2025</div>
+                        <p>Transform any corner of your home into a peaceful sanctuary for meditation, reflection, or simply finding calm in your daily routine...</p>
+<a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-post fade-in">
+                    <div class="blog-image"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Moon Phases and Energy">
+			</div>
+                    <div class="blog-content">
+			<br></br>
+                        <h3>Moon Phase Rituals for Self-Care</h3>
+                        <div class="blog-date">February 28, 2025</div>
+                        <p>Gentle rituals to align with lunar energy for intention setting, release, and renewal. Perfect for those new to moon cycle awareness...</p>
+<a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="fade-in">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <h3>Book Your Session</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest *</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="horoscope">Horoscope Reading</option>
+                                <option value="reiki">Reiki Energy Healing</option>
+                                <option value="pastlife">Past Life Regression</option>
+                                <option value="guidance">Spiritual Guidance</option>
+                                <option value="consultation">Free Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about what you're hoping to explore..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+			
+			<p style="margin-top: 1rem; font-style: italic;">
+                        I typically respond within 24 hours. I look forward to connecting with you!
+                    	</p>
+
+                    </form>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-detail">
+                        <span>📧</span>
+                        <span>sarah@spiritualwellness.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span>📱</span>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span>📍</span>
+                        <span>San Francisco Bay Area</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span>🕐</span>
+                        <span>Sessions by appointment</span>
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 1rem; color: var(--warm-gray);">
+                        <strong>Free 15-minute consultation available</strong><br>
+                        Not sure which service is right for you? Let's chat about your goals and find the perfect fit.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">FB</a>
+                        <a href="#" title="Instagram">IG</a>
+                        <a href="#" title="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sarah Chen</h3>
+                    <p>Guiding souls toward clarity, healing, and authentic connection with their highest self through compassionate spiritual practice.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="#services">Horoscope Readings</a></p>
+                    <p><a href="#services">Reiki Energy Healing</a></p>
+                    <p><a href="#services">Past Life Regression</a></p>
+                    <p><a href="#services">Spiritual Guidance</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="#blog">Blog & Insights</a></p>
+                    <p><a href="#quiz">Getting Started Quiz</a></p>
+                    <p><a href="#contact">Free Consultation</a></p>
+                    <p><a href="#">Newsletter Signup</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>sarah@spiritualwellness.com</p>
+                    <p>(555) 123-4567</p>
+                    <p>San Francisco Bay Area</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sarah Chen Spiritual Wellness. All rights reserved. All sessions are confidential and conducted with love and respect.</p><p style="0.6rem; font-style: italic;">Services are complementary to medical and psychological care, not a replacement.</p> <p><span style="opacity: 0.6;">Demo website created by mPath Services | Web Design & Digital Templates</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Quiz functionality
+        const quizOptions = document.querySelectorAll('.quiz-option');
+        const quizResult = document.getElementById('quiz-result');
+        const recommendationText = document.getElementById('recommendation-text');
+
+        const recommendations = {
+            horoscope: "A Horoscope Reading would be perfect for you! We'll explore your birth chart to understand your natural gifts, life themes, and the cosmic influences shaping your path. This session will give you clarity on your purpose and direction.",
+            reiki: "Reiki Energy Healing sounds like exactly what you need! This gentle, hands-on healing practice will help restore balance to your energy centers, leaving you feeling peaceful, centered, and renewed. Perfect for stress relief and overall wellness.",
+            pastlife: "Past Life Regression could offer profound insights for you! Through guided meditation, we'll gently explore soul memories that might be influencing current patterns. This can bring healing and understanding to relationships and life themes.",
+            guidance: "Spiritual Guidance sessions are ideal for your situation! We'll create a safe space to explore your questions, connect with your inner wisdom, and receive compassionate support as you navigate this important time in your life."
+        };
+
+        quizOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all options
+                quizOptions.forEach(opt => opt.classList.remove('selected'));
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                
+                // Show recommendation
+                const service = this.getAttribute('data-service');
+                recommendationText.textContent = recommendations[service];
+                quizResult.style.display = 'block';
+                
+                // Smooth scroll to result
+                quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+
+	function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQ answers
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            allAnswers.forEach(answer => {
+                answer.classList.remove('active');
+            });
+            
+            // Toggle current answer
+            if (!isActive) {
+                answer.classList.add('active');
+            }
+        }
+
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email) {
+                alert('Please fill in your name and email address.');
+                return;
+            }
+            
+            // Show success message
+            alert(`Thank you, ${name}! Your message has been received. I'll get back to you within 24 hours to schedule your ${service || 'consultation'}.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(254, 254, 254, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--soft-white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Initial fade-in for hero section
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.hero .fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 200);
+            });
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const createMobileMenu = () => {
+            if (window.innerWidth <= 768) {
+                const nav = document.querySelector('.nav-links');
+                const logo = document.querySelector('.logo');
+                
+                if (!document.querySelector('.mobile-menu-toggle')) {
+                    const menuToggle = document.createElement('button');
+                    menuToggle.className = 'mobile-menu-toggle';
+                    menuToggle.innerHTML = '☰';
+                    menuToggle.style.cssText = `
+                        background: none;
+                        border: none;
+                        font-size: 1.5rem;
+                        color: var(--sage-green);
+                        cursor: pointer;
+                        display: block;
+                    `;
+                    
+                    logo.parentNode.insertBefore(menuToggle, nav);
+                    
+                    menuToggle.addEventListener('click', () => {
+                        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                        if (nav.style.display === 'flex') {
+                            nav.style.cssText += `
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                background: var(--soft-white);
+                                flex-direction: column;
+                                padding: 1rem;
+                                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                            `;
+                        }
+                    });
+                }
+            }
+        };
+
+        window.addEventListener('resize', createMobileMenu);
+        createMobileMenu();
+    </script>
+</body>
+</html>
