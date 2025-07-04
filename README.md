@@ -64,3 +64,7 @@ The single HTML file contains all styling and functionality, making it easy to:
 📞 Contact
 For inquiries about custom website development - please reach out through www.mpathservices.com.
 This is a demonstration website created to showcase modern web design capabilities for spiritual wellness professionals.
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The MIT License allows you to use, modify, and distribute this code freely while maintaining proper attribution.
